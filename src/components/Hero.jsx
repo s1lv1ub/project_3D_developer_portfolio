@@ -1,51 +1,60 @@
 import { motion } from "framer-motion";
+import { silviu } from "../assets";
+import Tilt from "react-tilt";
+import { SectionWrapper } from "../hoc";
+import { fadeIn, textVariant } from "../utils/motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+const HeroCard = () => (
+  <Tilt className="xs:w-[250px] w-full ">
+    <motion.div
+      variants={fadeIn("right", "spring", 1 * 0.5, 0.75)}
+      className="w-full  p-[1px] rounded-[20px] shadow-card "
+    >
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary rounded-[20px] py-1   min-h-[280px] flex justify-evenly items-center flex-col"
+      >
+        <img src={silviu} alt="silviu bacila" className="w-76 h-76 " />
+      </div>
+    </motion.div>
+  </Tilt>
+);
+
+const HeroMision = () => (
+  <>
+    <motion.div variants={textVariant()}>
+      <h2 className={styles.sectionHeadText}>Ce îmi propun</h2>
+    </motion.div>
+
+    <motion.p
+      variants={fadeIn("", "", 0.1, 1)}
+      className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+    >
+      Obiectivul meu este să construiesc parteneriate durabile cu persoane și
+      organizații care împărtășesc viziunea mea de a face tehnologia avansată
+      accesibilă firmelor mici și mijlocii. Îmi doresc să lucrăm împreună pentru
+      dezvoltarea de soluții IT care sunt nu doar profesionale și scalabile, dar
+      și accesibile, schimbând astfel modul în care aceste afaceri beneficiază
+      de tehnologie. Sunt dedicat să cultivăm un mediu de colaborare unde ideile
+      noastre comune se transformă în soluții reale care simplifică și
+      îmbunătățesc procesele de business, oferind tuturor acces la instrumente
+      tehnologice de top.
+    </motion.p>
+  </>
+);
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
-      >
-        <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
-          <div className='w-1 sm:h-80 h-40 violet-gradient' />
-        </div>
-
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
-          </p>
-        </div>
-      </div>
-
-      <ComputersCanvas />
-
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className='w-3 h-3 rounded-full bg-secondary mb-1'
-            />
-          </div>
-        </a>
-      </div>
+    <section className="relative w-full w-full top-[40px]">
+      <HeroCard />
+      <p className=" mt-12"></p>
+      <HeroMision />
     </section>
   );
 };
-
-export default Hero;
+export default SectionWrapper(Hero, "hero");

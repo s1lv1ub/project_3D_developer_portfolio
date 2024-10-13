@@ -18,21 +18,26 @@ import {
   meta,
   starbucks,
   tesla,
+  ibm,
+  hpe,
+  luxoft,
   shopify,
   carrent,
   jobit,
   tripguide,
   threejs,
+  java,
+  spring,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "Despre",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Activitate",
   },
   {
     id: "contact",
@@ -42,19 +47,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Dezvoltator Java",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Dezvoltator  microservicii",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Dezvoltator backend",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Dezvotator Spring Boot",
     icon: creator,
   },
 ];
@@ -64,49 +69,23 @@ const technologies = [
     name: "HTML 5",
     icon: html,
   },
+
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Java",
+    icon: java,
   },
+
   {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
+    name: "Spring",
+    icon: spring,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",
@@ -116,55 +95,44 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Java Developer",
+    company_name: "Luxoft | București",
+    icon: luxoft,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Iun 2021 – Sep 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Dezvoltarea de noi funcționalități pentru sistemul de administrare bancar al Deutsche Bank, conform cerințelor de business.",
+      "Evaluarea unei solutii financiare dezvoltată de Genesis Global si folosita ca platforma de dezvoltare",
+      "Crearea de scripturi automatizate pentru echipa de QA, contribuind la eficientizarea proceselor de testare și livrare. ",
+      "Asigurarea unui flux de lucru eficient prin colaborare constantă cu echipa de automatizare și managementul proiectului.",
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    title: "Java Developer",
+    company_name: "IBM | București",
+    icon: ibm,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Feb 2019 – Iun 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Dezvoltarea și mentenanța unui instrument construit pe infrastructura Eclipse pentru a ajuta dezvoltatorii în gestionarea codului Cobol și Natural în sistemele bancare.",
+      "Implementarea de noi funcționalități și îmbunătățirea celor existente pentru a optimiza capabilitățile de analiză și compilare a codului.",
+      "Integrarea produsului cu o nouă bază de date, asigurând o gestionare și recuperare eficientă a datelor.",
+      "Mentenanța și actualizarea microserviciilor, asigurând fiabilitatea și performanța sistemului.",
+      "Colaborarea cu echipe multidisciplinare, inclusiv designeri și manageri de proiect, pentru a alinia eforturile de dezvoltare cu obiectivele de business.",
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Java Developer",
+    company_name: "HPE | București",
+    icon: hpe,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Sep 2015 – Feb 2019",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Dezvoltarea și implementarea de framework-uri noi de la zero pentru unul dintre cei mai mari furnizori de soluții de telecomunicații din Germania.",
+      "Scrierea documentației Java ",
+      "Implementarea de teste funcționale și de performanță pentru a valida fiabilitatea și eficiența sistemului.",
+      "Proiectarea și implementarea unei soluții de colectare a datelor pentru a îmbunătăți procesul de analiză și gestionare a informațiilor..",
+      "Crearea și implementarea de teste automate pentru a asigura calitatea și stabilitatea aplicației.",
     ],
   },
 ];
@@ -172,27 +140,15 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "I had the pleasure of working with Silviu on a successful HPE project, where he distinguished himself by his " +
+      "outstanding skills in Java software development and efficient solving of complex problems. " +
+      "His constant commitment to quality and a proactive attitude were decisive in achieving the success of the project. " +
+      "Also, his ability to communicate and collaborate with the team was instrumental in achieving our goals. " +
+      "I recommend him to be a team leader in a software development team. ",
+    name: "Octavian (Tani) Turcu, PMP®, Certified SAFe® 5 POPM ",
+    designation: "Customer Project Manager EMEA ",
+    company: "HPE",
+    //image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
 ];
 
